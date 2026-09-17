@@ -1,0 +1,219 @@
+{
+    "coverage": {
+        "name": "coverage",
+        "shape": [
+            399859,
+            11
+        ],
+        "columns": [
+            "GROUP",
+            "CODE",
+            "NAME",
+            "YEAR",
+            "ANTIGEN",
+            "ANTIGEN_DESCRIPTION",
+            "COVERAGE_CATEGORY",
+            "COVERAGE_CATEGORY_DESCRIPTION",
+            "TARGET_NUMBER",
+            "DOSES",
+            "COVERAGE"
+        ],
+        "dtypes": {
+            "GROUP": "object",
+            "CODE": "object",
+            "NAME": "object",
+            "YEAR": "float64",
+            "ANTIGEN": "object",
+            "ANTIGEN_DESCRIPTION": "object",
+            "COVERAGE_CATEGORY": "object",
+            "COVERAGE_CATEGORY_DESCRIPTION": "object",
+            "TARGET_NUMBER": "float64",
+            "DOSES": "float64",
+            "COVERAGE": "float64"
+        },
+        "missing_values": {
+            "GROUP": 0,
+            "CODE": 1,
+            "NAME": 1275,
+            "YEAR": 1,
+            "ANTIGEN": 1,
+            "ANTIGEN_DESCRIPTION": 1,
+            "COVERAGE_CATEGORY": 1,
+            "COVERAGE_CATEGORY_DESCRIPTION": 1,
+            "TARGET_NUMBER": 320829,
+            "DOSES": 320532,
+            "COVERAGE": 169382
+        },
+        "duplicate_records": 0,
+        "year_min": 1980,
+        "year_max": 2023,
+        "unique_countries": 245
+    },
+    "incidence": {
+        "name": "incidence",
+        "shape": [
+            84946,
+            8
+        ],
+        "columns": [
+            "GROUP",
+            "CODE",
+            "NAME",
+            "YEAR",
+            "DISEASE",
+            "DISEASE_DESCRIPTION",
+            "DENOMINATOR",
+            "INCIDENCE_RATE"
+        ],
+        "dtypes": {
+            "GROUP": "object",
+            "CODE": "object",
+            "NAME": "object",
+            "YEAR": "float64",
+            "DISEASE": "object",
+            "DISEASE_DESCRIPTION": "object",
+            "DENOMINATOR": "object",
+            "INCIDENCE_RATE": "float64"
+        },
+        "missing_values": {
+            "GROUP": 0,
+            "CODE": 1,
+            "NAME": 1,
+            "YEAR": 1,
+            "DISEASE": 1,
+            "DISEASE_DESCRIPTION": 1,
+            "DENOMINATOR": 1,
+            "INCIDENCE_RATE": 23362
+        },
+        "duplicate_records": 0,
+        "year_min": 1980,
+        "year_max": 2023,
+        "unique_countries": 221
+    },
+    "cases": {
+        "name": "cases",
+        "shape": [
+            84870,
+            7
+        ],
+        "columns": [
+            "GROUP",
+            "CODE",
+            "NAME",
+            "YEAR",
+            "DISEASE",
+            "DISEASE_DESCRIPTION",
+            "CASES"
+        ],
+        "dtypes": {
+            "GROUP": "object",
+            "CODE": "object",
+            "NAME": "object",
+            "YEAR": "float64",
+            "DISEASE": "object",
+            "DISEASE_DESCRIPTION": "object",
+            "CASES": "float64"
+        },
+        "missing_values": {
+            "GROUP": 0,
+            "CODE": 1,
+            "NAME": 1,
+            "YEAR": 1,
+            "DISEASE": 1,
+            "DISEASE_DESCRIPTION": 1,
+            "CASES": 19400
+        },
+        "duplicate_records": 0,
+        "year_min": 1980,
+        "year_max": 2023,
+        "unique_countries": 221
+    },
+    "intro": {
+        "name": "intro",
+        "shape": [
+            138321,
+            6
+        ],
+        "columns": [
+            "ISO_3_CODE",
+            "COUNTRYNAME",
+            "WHO_REGION",
+            "YEAR",
+            "DESCRIPTION",
+            "INTRO"
+        ],
+        "dtypes": {
+            "ISO_3_CODE": "object",
+            "COUNTRYNAME": "object",
+            "WHO_REGION": "object",
+            "YEAR": "float64",
+            "DESCRIPTION": "object",
+            "INTRO": "object"
+        },
+        "missing_values": {
+            "ISO_3_CODE": 0,
+            "COUNTRYNAME": 1,
+            "WHO_REGION": 1,
+            "YEAR": 1,
+            "DESCRIPTION": 1,
+            "INTRO": 1
+        },
+        "duplicate_records": 0,
+        "year_min": 1940,
+        "year_max": 2023,
+        "unique_countries": 195
+    },
+    "schedule": {
+        "name": "schedule",
+        "shape": [
+            8053,
+            12
+        ],
+        "columns": [
+            "ISO_3_CODE",
+            "COUNTRYNAME",
+            "WHO_REGION",
+            "YEAR",
+            "VACCINECODE",
+            "VACCINE_DESCRIPTION",
+            "SCHEDULEROUNDS",
+            "TARGETPOP",
+            "TARGETPOP_DESCRIPTION",
+            "GEOAREA",
+            "AGEADMINISTERED",
+            "SOURCECOMMENT"
+        ],
+        "dtypes": {
+            "ISO_3_CODE": "object",
+            "COUNTRYNAME": "object",
+            "WHO_REGION": "object",
+            "YEAR": "float64",
+            "VACCINECODE": "object",
+            "VACCINE_DESCRIPTION": "object",
+            "SCHEDULEROUNDS": "float64",
+            "TARGETPOP": "object",
+            "TARGETPOP_DESCRIPTION": "object",
+            "GEOAREA": "object",
+            "AGEADMINISTERED": "object",
+            "SOURCECOMMENT": "object"
+        },
+        "missing_values": {
+            "ISO_3_CODE": 0,
+            "COUNTRYNAME": 1,
+            "WHO_REGION": 1,
+            "YEAR": 1,
+            "VACCINECODE": 1,
+            "VACCINE_DESCRIPTION": 1,
+            "SCHEDULEROUNDS": 1,
+            "TARGETPOP": 4258,
+            "TARGETPOP_DESCRIPTION": 1,
+            "GEOAREA": 31,
+            "AGEADMINISTERED": 1046,
+            "SOURCECOMMENT": 2914
+        },
+        "duplicate_records": 0,
+        "year_min": 2019,
+        "year_max": 2023,
+        "unique_countries": 214
+    }
+}
