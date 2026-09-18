@@ -141,11 +141,19 @@ class EDA:
             plt.savefig(self.figures_dir / "15_cases_by_disease.png", bbox_inches='tight')
             plt.close()
             
-            plt.figure(figsize=(12,6))
+            plt.figure(figsize=(10,8))
             recent_year = df_cases['year'].max()
             disease_cases_recent = df_cases[df_cases['year']==recent_year].groupby('disease')['cases'].sum().sort_values(ascending=False).head(10)
-            disease_cases_recent.plot(kind='pie', autopct='%1.1f%%')
+            
+            # Hide labels on the pie, move to legend. Only show % if > 2%
+            disease_cases_recent.plot(
+                kind='pie', 
+                autopct=lambda p: f'{p:.1f}%' if p > 2 else '',
+                labels=['' for _ in disease_cases_recent.index],
+                ylabel=''
+            )
             plt.title(f"16. Cases Distribution by Disease ({recent_year})")
+            plt.legend(disease_cases_recent.index, title="Diseases", loc="center left", bbox_to_anchor=(1, 0.5))
             plt.savefig(self.figures_dir / "16_cases_pie.png", bbox_inches='tight')
             plt.close()
 
