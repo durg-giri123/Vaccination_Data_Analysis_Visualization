@@ -8,9 +8,9 @@ import logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class EDA:
-    def __init__(self, data_dir: str = "../data/exports"):
-        self.data_dir = Path(data_dir)
-        self.figures_dir = Path(__file__).parent.parent / "reports" / "figures"
+    def __init__(self, data_dir: Path):
+        self.data_dir = data_dir
+        self.figures_dir = data_dir.parent.parent / "reports" / "figures"
         self.figures_dir.mkdir(parents=True, exist_ok=True)
         self.data = {}
         
@@ -18,7 +18,7 @@ class EDA:
         for file in self.data_dir.glob("*.csv"):
             name = file.stem
             self.data[name] = pd.read_csv(file)
-            logging.info(f"Loaded {name}")
+            logging.info(f"Loaded {name} with shape {self.data[name].shape}")
             
     def generate_visualizations(self):
         sns.set_theme(style="whitegrid")
@@ -204,5 +204,5 @@ class EDA:
         logging.info("EDA completed successfully.")
 
 if __name__ == "__main__":
-    eda = EDA()
+    eda = EDA(data_dir=Path(__file__).parent.parent / "data" / "exports")
     eda.run_all()
