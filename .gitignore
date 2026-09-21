@@ -5,7 +5,7 @@ __pycache__/
 data/raw/*
 data/processed/*
 data/exports/*
-data/*.db
+# data/*.db
 data/*.sqlite
 !data/raw/.gitkeep
 !data/processed/.gitkeep
