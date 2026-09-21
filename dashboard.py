@@ -20,19 +20,15 @@ def load_data():
     
     # Load coverage
     query_cov = """
-    SELECT c.name as country_name, c.who_region, v.year, a.antigen, v.coverage
-    FROM fact_vaccination_coverage v
-    JOIN dim_country c ON v.country_id = c.country_id
-    JOIN dim_vaccine a ON v.vaccine_id = a.vaccine_id
+    SELECT name as country_name, `group` as who_region, year, antigen, coverage
+    FROM fact_vaccination_coverage
     """
     df_cov = pd.read_sql(query_cov, conn)
     
     # Load cases
     query_cases = """
-    SELECT c.name as country_name, c.who_region, r.year, d.disease, r.cases
-    FROM fact_reported_cases r
-    JOIN dim_country c ON r.country_id = c.country_id
-    JOIN dim_disease d ON r.disease_id = d.disease_id
+    SELECT name as country_name, `group` as who_region, year, disease, cases
+    FROM fact_reported_cases
     """
     df_cases = pd.read_sql(query_cases, conn)
     
