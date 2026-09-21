@@ -4,6 +4,8 @@
 
 ---
 
+?? **Live Interactive Dashboard:** [View the Deployed Streamlit Dashboard Here](https://vaccinationdataanalysisvisualization-covgggq6jasyvtfdk4nsf6.streamlit.app/)
+
 ## 1. Executive Summary
 This report documents the end-to-end workflow, methodologies, and technical implementations executed for the "Vaccination Data Analysis and Visualization" project. The primary objective was to transform raw, disconnected Excel datasets into a professional, automated data pipeline resulting in a normalized SQL database, 21 comprehensive exploratory data analysis (EDA) visualizations, and a complete Power BI deployment strategy.
 

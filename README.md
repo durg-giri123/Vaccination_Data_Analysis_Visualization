@@ -1,5 +1,7 @@
 # Vaccination Data Analysis and Visualization
 
+?? **Live Interactive Dashboard:** [Click here to view the deployed Streamlit Dashboard](https://vaccinationdataanalysisvisualization-covgggq6jasyvtfdk4nsf6.streamlit.app/)
+
 ## Project Overview
 This project provides a comprehensive end-to-end analysis of global vaccination data to understand trends in coverage, disease incidence, reported cases, and the interrelationships between them.
 
