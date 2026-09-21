@@ -122,3 +122,24 @@ Because the pipeline outputs clean, relational SQL data and engineered CSVs, the
 
 ## 11. Reproducibility
 The entire workflow was scripted for single-click execution. A user simply clones the repository, installs the isolated dependencies via `requirements.txt`, and executes `run_pipeline.py`. The script orchestrates the loading, cleaning, engineering, database seeding, and visual plotting automatically.
+
+
+---
+
+## 12. Appendix: Original Project Requirements & Questions Addressed
+
+This project successfully addresses all analytical questions and tasks set forth in the original requirements:
+
+1. **Data Cleaning:** Handle missing values, normalize schemas, and validate boundaries.
+2. **Feature Engineering:** Calculate Coverage Gap, Target Achieved (95%), and Year-over-Year changes.
+3. **SQL Modeling:** Design a Star Schema (Fact and Dimension tables) to link cases, incidence, coverage, and schedules.
+4. **SQL Analytics:** Create views and queries to calculate Dose Drop-off (e.g., DTP1 vs DTP3) and global burdens.
+5. **Exploratory Data Analysis (EDA):**
+   - Analyze the distribution of global coverage.
+   - Compare regional coverage disparities using boxplots.
+   - Track Measles coverage against the 95% target.
+   - Perform Quadrant Analysis (High Coverage vs. Low Incidence).
+   - Calculate the statistical correlation between vaccination coverage and reported disease outbreaks.
+6. **Dashboarding:** Provide a fully interactive dashboard to filter by Year and WHO Region, track historical trends, and visualize geographic disparities.
+7. **Limitations Handling:** Acknowledge missing demographic variables (such as Urban vs Rural, Gender, and Education) and note their absence without fabricating data.
+
