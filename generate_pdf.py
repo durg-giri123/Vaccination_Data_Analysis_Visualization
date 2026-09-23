@@ -1,4 +1,5 @@
 from fpdf import FPDF
+import os
 
 class PDF(FPDF):
     def header(self):
@@ -22,8 +23,6 @@ class PDF(FPDF):
 
     def chapter_body(self, body):
         self.set_font("Arial", "", 11)
-        # Using multi_cell to handle line breaks and encoding
-        # fpdf1 supports latin-1, so encode to avoid errors with special chars
         body = body.encode('latin-1', 'replace').decode('latin-1')
         self.multi_cell(0, 6, body)
         self.ln()
@@ -74,12 +73,18 @@ def create_pdf():
          "SCENARIO-BASED SOLUTIONS\n"
          "- Resource Allocation: The interactive dashboard's 'WHO Region' filter allows agencies to visually isolate low-coverage areas.\n"
          "- Evaluating Campaigns: Time-series charts allow tracking if a 5-year campaign bent the incidence curve downwards.\n"
-         "- Tracking Targets: The engineered 'target_achieved' KPI specifically tracks the WHO 95% 2030 goal.")
+         "- Tracking Targets: The engineered 'target_achieved' KPI specifically tracks the WHO 95% 2030 goal."),
+         
+        ("13. Final Interactive Power BI Dashboard", "As per project requirements, the final data pipeline concludes with a fully interactive Power BI dashboard utilizing the polished relational datasets.")
     ]
     
     for title, body in sections:
         pdf.chapter_title(title)
         pdf.chapter_body(body)
+        
+    # Append the image!
+    if os.path.exists("docs/powerbi_dashboard.png"):
+        pdf.image("docs/powerbi_dashboard.png", w=190)
         
     pdf.output("docs/DETAILED_WORKFLOW_REPORT.pdf")
 

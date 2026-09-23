@@ -179,3 +179,10 @@ Yes. For instance, Yellow Fever incidence is almost exclusively localized to spe
 * **Resource Allocation (Identifying low coverage):** Our interactive Power BI/Streamlit dashboard includes a "WHO Region" filter and a geographical map, allowing government agencies to instantly visually identify countries with the lowest coverage for targeted intervention.
 * **Evaluating Campaigns & Outbreaks:** The time-series trend charts allow public health officials to look at a specific 5-year window to see if a newly launched campaign actually forced the incidence rate line downwards.
 * **Tracking WHO 95% Targets:** We engineered a specific KPI metric (`target_achieved`) and a "Coverage Gap" chart that explicitly tracks how far a region is from the 2030 WHO 95% target.
+
+
+## 13. Power BI Interactive Dashboard
+As per the project requirements, an interactive Power BI dashboard was constructed using the engineered SQL dataset to provide geographical and temporal visualizations of global vaccination coverage and disease incidence.
+
+![Power BI Dashboard](powerbi_dashboard.png)
+
